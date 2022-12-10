@@ -5,35 +5,30 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
-@Table(name="patient")
-
+@Table(name = "patients")
 public class Patient {
-
-        @Id
-        @GeneratedValue
-        private int id;
-        private String username;
-        private int ids;
-        private String address;
-        private String number;
-        private String date;
-        private String image;
-        private String doctor;
+    @Id
+    @GeneratedValue()
+    private int id;
+    private String name;
+    private String image;
+    private String address;
+    private String phone;
+    private String dateofappointment;
+    private String doctorname;
 
     public Patient() {
     }
 
-    public Patient(int id, String username, int ids, String address, String number, String date, String image, String doctor) {
+    public Patient(int id, String name, String image, String address, String phone, String dateofappointment, String doctorname) {
         this.id = id;
-        this.username = username;
-        this.ids = ids;
-        this.address = address;
-        this.number = number;
-        this.date = date;
+        this.name = name;
         this.image = image;
-        this.doctor = doctor;
+        this.address = address;
+        this.phone = phone;
+        this.dateofappointment = dateofappointment;
+        this.doctorname = doctorname;
     }
 
     public int getId() {
@@ -44,44 +39,12 @@ public class Patient {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public int getIds() {
-        return ids;
-    }
-
-    public void setIds(int ids) {
-        this.ids = ids;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getImage() {
@@ -92,12 +55,35 @@ public class Patient {
         this.image = image;
     }
 
-    public String getDoctor() {
-        return doctor;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDoctor(String doctor) {
-        this.doctor = doctor;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDateofappointment() {
+        return dateofappointment;
+    }
+
+    public void setDateofappointment(String dateofappointment) {
+        this.dateofappointment = dateofappointment;
+    }
+
+    public String getDoctorname() {
+        return doctorname;
+    }
+
+    public void setDoctorname(String doctorname) {
+        this.doctorname = doctorname;
     }
 }
-
